@@ -3,20 +3,20 @@
         <title> Django Girl's Blog </title>
     </head>
     <body>
-
         <div>
             <h1> <a href=""> Django Girl's Blog </a> </h1>
             <p> published: 01.09.2019, 11:21 </p>
         </div>
 
-
+        {%for post in posts%}
         <div>
+            <p> published: {{ post.published_date }} </p> 
+            <h2> <a href=""> {{ post.title }} </a> </h2>
+            <p> {{post.text | linebreaksbr}} </p>
             
-            <h2> <a href=""> My first post </a> </h2>
-            <p> csbvfdhbvjdsbfvjhdbvjshdfbvksjhfbvakjsdbvashfgadiyaabcjkabcksdfhiasfyiuasefhjzvcbjzknvkagfiosiefywoefksdbvjks </p>
-            <p> published: 01.09.2019, 11:21 </p>
             
         </div>
+        {% endfor %}
 
         <div>
             
